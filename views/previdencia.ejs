@@ -1,0 +1,33 @@
+
+<%	
+	var ie = 75;
+	var t = (ia - ie) * 12;
+	var p = (t * e) * ((100)/(100 - ir));
+	var n = (ia - id) * 12;
+	var i = 0.01;
+	var r = (p * i) / (Math.pow((1 + i), n) - 1);
+%>
+<h1>Entradas</h1>
+<p>Renda esperada = <%= e %></p>
+<p>Alíquota de IR = <%= ir %></p>
+<p>Idade Atual = <%= id %></p>
+<p>Idade Aposento = <%= ia %></p>
+
+<br><br><br>
+
+<h1>Calculos</h1>
+<p>t = (ia - ie) * 12</p>
+<p>p = (t * e) * ((100)/(100 - ir))</p>
+<p>n = (ia - id) * 12</p>
+<p>i = 0.01</p>
+<p>r = (p * 0.01) / (Math.pow((1 + 0.01), n) - 1)</p>
+
+<br><br><br>
+
+<h1>Saidas</h1>
+<p>Expectativa de vida(IE) = <%= ie %></p>
+<p>Duração de recebimento(T) = <%= t %></p>
+<p>Principal(acumulo do capital)(P) = <%= p %></p>
+<p>Número de Prestações(N) = <%= n %></p>
+<p>TAca de Juros(I) = <%= i %></p>
+<p>Prestação a ser investida mensalmente(R) = <%= r %></p>
