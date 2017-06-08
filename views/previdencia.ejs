@@ -1,7 +1,7 @@
 
 <%	
 	var ie = 75;
-	var t = (ia - ie) * 12;
+	var t = (ie - ia) * 12;
 	var p = (t * e) * ((100)/(100 - ir));
 	var n = (ia - id) * 12;
 	var i = 0.01;
@@ -15,19 +15,18 @@
 
 <br><br><br>
 
-<h1>Calculos</h1>
-<p>t = (ia - ie) * 12</p>
-<p>p = (t * e) * ((100)/(100 - ir))</p>
-<p>n = (ia - id) * 12</p>
-<p>i = 0.01</p>
-<p>r = (p * 0.01) / (Math.pow((1 + 0.01), n) - 1)</p>
+<h1>Cálculos</h1>
+<p>	<%= t + " = (" + id + " - " + ia + ") * 12" %>
+<p> <%= p + " = (" + t + " * " + e + ") * ((100)/(100 - " + ir + "))"%>
+<p>	<%= n + " = (" + ia + " - " + id + ") * 12" %>
+<p> <%= r + " = (" + p + " * " + i + ") / (Math.pow((1 + " + i + "), " + n + ") - 1)" %>
 
 <br><br><br>
 
-<h1>Saidas</h1>
+<h1>Saídas</h1>
 <p>Expectativa de vida(IE) = <%= ie %></p>
 <p>Duração de recebimento(T) = <%= t %></p>
 <p>Principal(acumulo do capital)(P) = <%= p %></p>
 <p>Número de Prestações(N) = <%= n %></p>
-<p>TAca de Juros(I) = <%= i %></p>
+<p>Taxa de Juros(I) = <%= i %></p>
 <p>Prestação a ser investida mensalmente(R) = <%= r %></p>
