@@ -12,18 +12,17 @@
     <link href="styles.css" rel="stylesheet">
 </head>
 
-<body>
-    <div class="container">
-        <div align="text-center">
+<body align="center">
+    <div class="container" align="center" >
+        <div>
             <h1>Cálculo da Previdência Fintech</h1>
         </div>
-        <div id="nameInput" class="input-group-lg center-block helloInput">
+        <div id="nameInput" class="input-group-lg center-block helloInput" >
             <!--<input id="user_name" type="text" class="form-control" placeholder="name" />-->
-            <input id="e" type="number" class="form-control" placeholder="Renda Esperada" />
-            <input id="ir" type="number" class="form-control" placeholder="Alíquota de IR" />
-            <input id="id" type="number" class="form-control" placeholder="Idade Atual
-            " />
-            <input id="ia" type="number" class="form-control" placeholder="Idade de Aposento" />
+            <input id="e" type="number" class="form-control" placeholder="Renda Esperada" min="0" />
+            <input id="ir" type="number" class="form-control" placeholder="Alíquota de IR" min="0" />
+            <input id="id" type="number" class="form-control" placeholder="Idade Atual" min="0" />
+            <input id="ia" type="number" class="form-control" placeholder="Idade de Aposento" min="0" />
             <button id="calculate" type="button" class="btn btn-success">Calcular</button>
         </div>
         <p id="response" class="lead text-center"></p>
@@ -35,50 +34,8 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <script>
-    	//Submit data when enter key is pressed
-        //$('#user_name').keydown(function(e) {
-            $('#calculate').click(function(e) {
-        	//var name = $('#user_name').val();
-            var e = $('#e').val();
-            var ir = $('#ir').val();
-            var id = $('#id').val();
-            var ia = $('#ia').val();
-                $.ajax({
-				  method: "POST",
-				  url: "./api/previdencia",
-				  contentType: "application/json",
-				  data: JSON.stringify({
-                    name: name,
-                    e: e,
-                    ir: ir,
-                    id: id,
-                    ia: ia 
-                  })
-				})
-                .done(function(data) {
-                    $('#response').html(data);
-                    $('#nameInput').hide();
-                    //getNames();
-                });
-        });
+    <script type="text/javascript" src="index.js"></script>
 
-        /*
-        //Retreive all the visitors from the database
-        function getNames(){
-          $.get("./api/previdencia")
-              .done(function(data) {
-                  if(data.length > 0) {
-                    $('#databaseNames').html("Database contents: " + JSON.stringify(data));
-                  }
-              });
-          }
-
-          //Call getNames on page load.
-          getNames();
-        */
-
-    </script>
 </body>
 
 </html>
