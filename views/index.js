@@ -39,7 +39,16 @@ $('#calculate').click(function(e) {
         $('#i').css("border-color", "#FFF");
     }
     if(fail > 0){
+        $('#aviso').text("Não pode haver campos em branco");
         return;
+    } else if(id >= ia) {
+        $('#aviso').text("Idades inconsistentes");
+        return;
+    } else if(id <= 0 || i <= 0 || ia <= 0 || ir <= 0 || e <= 0){
+        $('#aviso').text("Dados inconsistentes");
+        return;
+    } else {
+        $('#aviso').text("");
     }
     $.ajax({
 	    method: "POST",
