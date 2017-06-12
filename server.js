@@ -19,6 +19,7 @@ var mydb;
 */
 app.post("/api/previdencia", function (request, response) {
   //var userName = request.body.e;
+  var i = request.body.i;
   var e = request.body.e;
   var ir = request.body.ir;
   var id = request.body.id;
@@ -27,7 +28,8 @@ app.post("/api/previdencia", function (request, response) {
     e: e,
     ir: ir,
     id: id,
-    ia: ia
+    ia: ia,
+    i: i
   });
   /*
   if(!mydb) {

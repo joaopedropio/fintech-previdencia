@@ -4,13 +4,14 @@
 	var t = (ie - ia) * 12;
 	var p = (t * e) * ((100)/(100 - ir));
 	var n = (ia - id) * 12;
-	var i = 0.01;
+	var i = i / 100;
 	var r = (p * i) / (Math.pow((1 + i), n) - 1);
 %>
 <h1>Entradas</h1>
 <p>Renda esperada = <%= e %></p>
 <p>Alíquota de IR = <%= ir %></p>
 <p>Idade Atual = <%= id %></p>
+<p>Taxa de Juros(I) = <%= i%></p>
 <p>Idade Aposento = <%= ia %></p>
 
 <br><br><br>
@@ -28,5 +29,4 @@
 <p>Duração de recebimento(T) = <%= t.toFixed(2) %></p>
 <p>Principal(acumulo do capital)(P) = <%= p.toFixed(2) %></p>
 <p>Número de Prestações(N) = <%= n.toFixed(2) %></p>
-<p>Taxa de Juros(I) = <%= i.toFixed(2) * 100 %>%</p>
 <p>Prestação a ser investida mensalmente(R) = <%= r.toFixed(2) %></p>

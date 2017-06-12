@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height: 100%;">
 
 <head>
     <meta charset="utf-8">
@@ -12,8 +12,9 @@
     <link href="styles.css" rel="stylesheet">
 </head>
 
-<body align="center">
-    <div class="container" align="center" >
+<body align="center" style="height: 100%; width: 100;">
+    <div class="container" align="center" style="background-image:url('retirement.jpeg');background-size:cover;                      
+               background-repeat:no-repeat;background-position:center;height:100%; width:100%; margin:0;">
         <div>
             <h1>Cálculo da Previdência Fintech</h1>
         </div>
@@ -23,6 +24,7 @@
             <input id="ir" type="number" class="form-control" placeholder="Alíquota de IR" min="0" />
             <input id="id" type="number" class="form-control" placeholder="Idade Atual" min="0" />
             <input id="ia" type="number" class="form-control" placeholder="Idade de Aposento" min="0" />
+            <input id="i" type="number" class="form-control" placeholder="Taxa imposto" min="0" />
             <button id="calculate" type="button" class="btn btn-success">Calcular</button>
         </div>
         <p id="response" class="lead text-center"></p>

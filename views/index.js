@@ -31,6 +31,13 @@ $('#calculate').click(function(e) {
     } else {
         $('#ia').css("border-color", "#FFF");
     }
+    var i = $('#i').val();
+    if(i == null || i == "") {
+        $('#i').css("border-color", "#F00");
+        fail++;
+    } else {
+        $('#i').css("border-color", "#FFF");
+    }
     if(fail > 0){
         return;
     }
@@ -43,7 +50,8 @@ $('#calculate').click(function(e) {
             e: e,
             ir: ir,
             id: id,
-            ia: ia 
+            ia: ia,
+            i : i
         })
 	})
     .done(function(data) {
