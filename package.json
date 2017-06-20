@@ -1,7 +1,7 @@
 {
-  "name": "get-started-node",
+  "name": "fintech-previdencia",
   "main": "server.js",
-  "description": "An introduction to developing Node.js apps on the Bluemix platform",
+  "description": "Calcular o valor da mensalidade da aposentadoria",
   "version": "0.1.1",
   "private": false,
   "engines": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/IBM-Bluemix/get-started-node"
+    "url": "https://github.com/joaopedropio/fintech-previdencia"
   },
   "dependencies": {
     "body-parser": "^1.17.x",
@@ -23,6 +23,6 @@
     "express": "^4.15.x",
     "livereload": "^0.6.2"
   },
-  "author": "IBM Corp",
+  "author": "Joao Pedro",
   "license": "Apache-2.0"
 }

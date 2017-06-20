@@ -1,7 +1,4 @@
-//Submit data when enter key is pressed
-//$('#user_name').keydown(function(e) {
 $('#calculate').click(function(e) {
-	//var name = $('#user_name').val();
     var fail = 0;
     var e = $('#e').val();
     if(e == null || e == "") {
@@ -66,21 +63,5 @@ $('#calculate').click(function(e) {
     .done(function(data) {
         $('#response').html(data);
         $('#nameInput').hide();
-        //getNames();
     });
 });
-
-/*
-//Retreive all the visitors from the database
-function getNames(){
-  $.get("./api/previdencia")
-      .done(function(data) {
-          if(data.length > 0) {
-            $('#databaseNames').html("Database contents: " + JSON.stringify(data));
-          }
-      });
-  }
-
-  //Call getNames on page load.
-  getNames();
-*/
