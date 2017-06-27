@@ -1,11 +1,24 @@
-
 <%	
-	var ie = 75;
-	var t = (ie - ia) * 12;
-	var p = (t * e) * ((100)/(100 - ir));
-	var n = (ia - id) * 12;
-	var i = i / 100;
-	var r = (p * i) / (Math.pow((1 + i), n) - 1);
+
+	var ali_ir = 0;
+	var tempo_contribuicao_ano = ia - id;
+	var tempo_contribuicao_mes = tempo_contribuicao_ano*12;
+	var tempo_uso_mes = ir*12;
+	var valor_ser_acumulado = tempo_uso_mes * e;
+	var valor_sem_juros = valor_ser_acumulado*((100-i)/100);
+	var juros_aprox = valor_ser_acumulado - valor_sem_juros;
+	var valor_prestacao = valor_sem_juros/tempo_contribuicao_mes;
+	
+	if (tempo_contribuicao_ano < 2) ali_ir = 35;
+	else if (tempo_contribuicao_ano < 4) ali_ir = 30;
+	else if (tempo_contribuicao_ano < 6) ali_ir = 25;
+	else if (tempo_contribuicao_ano < 8) ali_ir = 20;
+	else if (tempo_contribuicao_ano < 10) ali_ir = 15;
+	else ali_ir = 10;
+	
+    var imposto_renda = juros_aprox * ali_ir;
+	
+	
 %>
 
 <br><br>
@@ -17,15 +30,15 @@
 	      <th style="background-color:lightcyan;">Duracao</th>
 	      <th style="background-color:lightcyan;">Acumulo</th>
 	      <th style="background-color:lightcyan;">Prestaçoes</th>
-	      <th style="background-color:lightcyan;">Mensal</th>
+	      <th style="background-color:lightcyan;">Valor da prestacao</th>
 	    </tr>
 	  </thead>
 	  <tbody>
 	    <tr>
-	      <td style="background-color:lightcyan;"><%= t.toFixed(0) %> meses </td>
-	      <td style="background-color:lightcyan;">R$<%= p.toFixed(2) %></td>
-	      <td style="background-color:lightcyan;"><%= n.toFixed(0) %> </td>
-	      <td style="background-color:lightcyan;">R$<%= r.toFixed(2) %></td>
+	      <td style="background-color:lightcyan;"><%= tempo_uso_mes.toFixed(0) %> meses </td>
+	      <td style="background-color:lightcyan;">R$<%= valor_ser_acumulado.toFixed(2) %></td>
+	      <td style="background-color:lightcyan;"><%= tempo_contribuicao_mes.toFixed(0) %> </td>
+		  <td style="background-color:lightcyan;">R$<%= valor_prestacao.toFixed(2) %></td>
 	    </tr>
 	  </tbody>
 	</table>
