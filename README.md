@@ -1,5 +1,6 @@
 # Como rodar o projeto?
 
-Executar os seguintes comando no terminal na pasta atual
+É necessário instalar Node.js. Para rodar o projeto é necessário executar os seguintes comandos no terminal na pasta atual:
+
 $ npm install
 $ node server.js
